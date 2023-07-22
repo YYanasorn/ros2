@@ -14,7 +14,7 @@ def main(args=None):
 
     request = AddTwoInts.Request()
     request.a = 3
-    request.b = 8
+    request.b = 5
 
     future = client.call_async(request)
     rclpy.spin_until_future_complete(node, future)
