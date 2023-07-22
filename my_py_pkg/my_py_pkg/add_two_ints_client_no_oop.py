@@ -13,7 +13,7 @@ def main(args=None):
         node.get_logger().warn("Waiting for Server Add Two ints...")
 
     request = AddTwoInts.Request()
-    request.a = 3
+    request.a = 4
     request.b = 8
 
     future = client.call_async(request)
