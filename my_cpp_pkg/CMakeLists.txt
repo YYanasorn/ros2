@@ -26,12 +26,14 @@ ament_target_dependencies(add_two_ints_server rclcpp example_interfaces)
 add_executable(add_two_ints_client_no_oop src/add_two_ints_client_no_oop.cpp)
 ament_target_dependencies(add_two_ints_client_no_oop rclcpp example_interfaces)
 
+add_executable(number_publisher src/number_publisher.cpp)
+ament_target_dependencies(number_publisher rclcpp example_interfaces)
+
 add_executable(add_two_ints_client src/add_two_ints_client.cpp)
 ament_target_dependencies(add_two_ints_client rclcpp example_interfaces)
 
 add_executable(hardware_status_publisher src/hw_status_publisher.cpp)
 ament_target_dependencies(hardware_status_publisher rclcpp my_robot_interfaces)
-
 
 install(TARGETS
   cpp_node
@@ -40,6 +42,7 @@ install(TARGETS
   add_two_ints_server
   add_two_ints_client_no_oop
   add_two_ints_client
+  number_publisher
   hardware_status_publisher
   DESTINATION lib/my_cpp_pkg
 )
